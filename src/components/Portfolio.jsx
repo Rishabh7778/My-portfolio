@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import samasthaImg from '../assets/samastha.png';
 import Ashacity from '../assets/asha-city.png';
-import FuelYourBody from '../assets/fuel-your-body.png';
+import FuelYourBody from '../assets/Fuel-Your-Body.png';
 import Akaari from '../assets/Akaari.png';
 import Clicknest from '../assets/ClicknestSolution.png';
 import DigiBuggy from '../assets/DigiBuggy.png';
