@@ -1,0 +1,22 @@
+body {
+  background-color: black;
+}
+
+
+
+@media (max-width: 500px) {  
+  .category {
+    white-space: nowrap;
+    overflow-x: scroll;
+    width: 100%;
+    justify-content: start;
+
+    /* Hide scrollbar */
+    -ms-overflow-style: none;  /* IE & Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+
+  .category::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari */
+  }
+}
