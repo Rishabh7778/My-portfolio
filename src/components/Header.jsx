@@ -32,7 +32,7 @@ export const Header = () => {
 
                 {/* Desktop CTA Button */}
                 <a href="#contact" className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium px-6 py-2.5 rounded shadow-lg transition hidden md:block">
-                    Hire Me
+                    Contact me
                 </a>
 
                 {/* Mobile Menu Button (Hamburger) */}
