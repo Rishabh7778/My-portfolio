@@ -6,6 +6,7 @@ import Akaari from '../assets/Akaari.png';
 import Clicknest from '../assets/ClicknestSolution.png';
 import DigiBuggy from '../assets/DigiBuggy.png';
 import Rajdhani from '../assets/Rajdhani.png';
+import startupMover from '../assets/startup-mover.png';
 
 const Portfolio = () => {
     const [activeFilter, setActiveFilter] = useState('All');
@@ -54,17 +55,20 @@ const Portfolio = () => {
         },
         {
             id: 2,
-            title: "Asha City",
+            title: "Startup Mover",
             category: "Laravel Apps",
-            img: Ashacity,
-            role: "Backend & API Developer",
-            description: "Built the core infrastructure for the Asha City platform. Focused on high-performance server logic and seamless API integration for their frontend interfaces.",
+            img: startupMover,
+            role: "Frontend Developer & Laravel Backend Contributor",
+            description: "Led the frontend development of the Startup Movers platform by transforming designs into responsive interfaces and contributed to backend features using Laravel.",
+
             contributions: [
-                "Engineered the application logic using Laravel",
-                "Optimized database queries for faster load times",
-                "Integrated third-party payment gateways"
+                "Converted UI/UX designs into responsive and interactive web pages",
+                "Ensured pixel-perfect implementation across desktop and mobile devices",
+                "Integrated frontend with backend APIs",
+                "Built backend functionalities and database operations using Laravel",
+                "Maintained clean, scalable, and reusable code structure"
             ],
-            link: "https://www.ashacity.com/"
+            link: "https://www.startup-movers.com/"
         },
         {
             id: 3,

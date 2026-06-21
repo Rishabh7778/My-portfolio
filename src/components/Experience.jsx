@@ -14,7 +14,7 @@ const Experience = () => {
             id: 2,
             role: "Full Stack Developer",
             company: "The Night Marketers",
-            period: "2024 - 2026",
+            period: "2025 - 2026",
             desc: "Architected and deployed robust web applications. Handled everything from crafting responsive, pixel-perfect frontends to designing secure database schemas and developing RESTful APIs.",
             highlight: "End-to-End Application Development"
         },

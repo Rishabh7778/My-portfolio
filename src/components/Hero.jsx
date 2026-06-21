@@ -59,7 +59,7 @@ const Hero = () => {
                     <a href="#contact" className="hero-btn bg-orange-500 hover:bg-orange-600 text-white font-medium px-8 py-3 rounded shadow-lg transition">
                         Contact us
                     </a>
-                    <a href="https://drive.google.com/file/d/1IZ5ZC_1S5RT3Jc2-Heb6BhF13dRwMhd_/view?usp=sharing" target='_blank' className="hero-btn bg-transparent border border-gray-600 hover:border-white text-white font-medium px-8 py-3 rounded transition">
+                    <a href="https://drive.google.com/file/d/16U8JI8ktMzw9IUNFxRB2xhRPPciT51Jj/view?usp=sharing" target='_blank' className="hero-btn bg-transparent border border-gray-600 hover:border-white text-white font-medium px-8 py-3 rounded transition">
                         Download CV
                     </a>
                 </div>

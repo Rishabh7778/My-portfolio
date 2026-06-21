@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import aboutImg from '../assets/profile-pic.png';
+import Rishabh from '../assets/Rishabh.webp';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -98,7 +98,7 @@ const About = () => {
                     <div className="w-full md:w-1/2 flex justify-center mb-10 md:mb-0 relative about-image-box">
                         <div className="absolute w-[300px] h-[350px] md:w-[400px] md:h-[450px] bg-[#1a1a1a] rounded-t-full top-10 z-0"></div>
                         <img
-                            src={aboutImg} alt="Profile"
+                            src={Rishabh} alt="Profile"
                             className="relative z-10 w-[300px] md:w-[395px] md:h-[450px] h-[400px] object-contain drop-shadow-2xl grayscale contrast-125"
                             style={{
                                 maskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)',
