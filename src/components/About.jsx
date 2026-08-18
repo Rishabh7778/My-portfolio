@@ -144,7 +144,7 @@ const About = () => {
 
                         </div>
                         <div className="pt-4 flex justify-center md:justify-start">
-                            <a href='https://drive.google.com/file/d/1IZ5ZC_1S5RT3Jc2-Heb6BhF13dRwMhd_/view?usp=sharing' target='_blank' rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded flex items-center space-x-2 transition-colors shadow-lg">
+                            <a href='https://drive.google.com/file/d/1lcpU5ooGcvJH1EsFt2MdvxiPspKInx2f/view?usp=sharing' target='_blank' rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded flex items-center space-x-2 transition-colors shadow-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                 </svg>

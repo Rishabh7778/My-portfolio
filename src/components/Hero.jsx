@@ -59,7 +59,7 @@ const Hero = () => {
                     <a href="#contact" className="hero-btn bg-orange-500 hover:bg-orange-600 text-white font-medium px-8 py-3 rounded shadow-lg transition">
                         Contact us
                     </a>
-                    <a href="https://drive.google.com/file/d/16U8JI8ktMzw9IUNFxRB2xhRPPciT51Jj/view?usp=sharing" target='_blank' className="hero-btn bg-transparent border border-gray-600 hover:border-white text-white font-medium px-8 py-3 rounded transition">
+                    <a href="https://drive.google.com/file/d/1lcpU5ooGcvJH1EsFt2MdvxiPspKInx2f/view?usp=sharing" target='_blank' className="hero-btn bg-transparent border border-gray-600 hover:border-white text-white font-medium px-8 py-3 rounded transition">
                         Download CV
                     </a>
                 </div>
@@ -67,15 +67,15 @@ const Hero = () => {
                 {/* Stats Box */}
                 <div className="hero-stats bg-[#1f1f1f] rounded-xl p-6 md:p-8 flex justify-between w-full md:w-11/12 lg:w-3/4 mt-4 shadow-xl border border-white/5">
                     <div className="pr-6 border-r border-gray-700">
-                        <h3 className="text-orange-500 text-2xl md:text-3xl font-bold">2+</h3>
+                        <h3 className="text-orange-500 text-2xl md:text-3xl font-bold">6+</h3>
                         <p className="text-gray-400 text-sm md:text-base">Experiences</p>
                     </div>
                     <div className="px-6 border-r border-gray-700">
-                        <h3 className="text-orange-500 text-2xl md:text-3xl font-bold">12+</h3>
+                        <h3 className="text-orange-500 text-2xl md:text-3xl font-bold">62+</h3>
                         <p className="text-gray-400 text-sm md:text-base">Project done</p>
                     </div>
                     <div className="pl-6">
-                        <h3 className="text-orange-500 text-2xl md:text-3xl font-bold">10+</h3>
+                        <h3 className="text-orange-500 text-2xl md:text-3xl font-bold">60+</h3>
                         <p className="text-gray-400 text-sm md:text-base">Happy Clients</p>
                     </div>
                 </div>

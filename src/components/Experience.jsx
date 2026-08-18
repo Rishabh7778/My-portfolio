@@ -14,7 +14,7 @@ const Experience = () => {
             id: 2,
             role: "Full Stack Developer",
             company: "The Night Marketers",
-            period: "2025 - 2026",
+            period: "2021 - 2026",
             desc: "Architected and deployed robust web applications. Handled everything from crafting responsive, pixel-perfect frontends to designing secure database schemas and developing RESTful APIs.",
             highlight: "End-to-End Application Development"
         },
@@ -22,7 +22,7 @@ const Experience = () => {
             id: 3,
             role: "Web Developer Intern",
             company: "TechnoHack",
-            period: "2023",
+            period: "2020 - 2021",
             desc: "Gained hands-on experience in modern frontend workflows. Built interactive UI components and learned the core fundamentals of scalable web design.",
             highlight: "Frontend UI/UX Implementation"
         }
