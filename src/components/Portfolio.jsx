@@ -59,6 +59,54 @@ const Portfolio = () => {
     const projects = [
         {
             id: 1,
+            title: "Kiranjyoti",
+            category: "Laravel Apps",
+            img: '/kiranjyoti.svg',
+            role: "Laravel Web Developer",
+            description: "Developed an NGO website for Kiranjyoti Foundation using Laravel, featuring online donation payments, PDF receipt generation, and pages showcasing the foundation's mission and initiatives.",
+            technologies: ["Laravel", "PHP"],
+            contributions: [
+                "Developed the NGO website using Laravel",
+                "Integrated online donation payments",
+                "Implemented PDF receipt generation for donations",
+                "Built pages showcasing the foundation's mission and initiatives"
+            ],
+            link: "https://kiranjyotifoundation.org/",
+        },
+        {
+            id: 2,
+            title: "Freshiq",
+            category: "Full Stack Apps",
+            img: '/freshiq.svg',
+            role: "Full Stack TypeScript Developer",
+            description: "Built Freshiq with React, Node.js, and SQL using TypeScript across the application. Developed an advanced admin panel and implemented JWT authentication.",
+            technologies: ["React", "Node.js", "SQL", "TypeScript", "JWT"],
+            contributions: [
+                "Developed the React frontend and Node.js backend using TypeScript",
+                "Integrated SQL for application data storage",
+                "Built an advanced admin panel",
+                "Implemented JWT authentication"
+            ],
+            link: "https://tiny-maamoul-ab5c83.netlify.app/",
+        },
+        {
+            id: 3,
+            title: "Planora - Social Media Calendar",
+            category: "Full Stack Apps",
+            img: '/planora.svg',
+            role: "Full Stack Developer",
+            description: "Developed a full-stack Instagram content planner using React, Node.js, MongoDB, Redis, and Docker, featuring secure OAuth account integration, automated post scheduling, background publishing, and media management. Built an interactive dashboard with a content calendar, post queues, notifications, and customizable settings to streamline content planning and publishing.",
+            technologies: ["React", "Node.js", "MongoDB", "Redis", "Docker", "OAuth"],
+            contributions: [
+                "Integrated Instagram accounts securely using OAuth",
+                "Implemented automated post scheduling and background publishing",
+                "Built media management tools for planned content",
+                "Developed an interactive dashboard with a content calendar and post queues",
+                "Added notifications and customizable settings for content planning"
+            ],
+        },
+        {
+            id: 4,
             title: "Samastha",
             category: "Custom Web",
             img: samasthaImg,
@@ -72,24 +120,7 @@ const Portfolio = () => {
             link: "https://samastha.co.in/"
         },
         {
-            id: 2,
-            title: "Startup Mover",
-            category: "Laravel Apps",
-            img: startupMover,
-            role: "Frontend Developer & Laravel Backend Contributor",
-            description: "Led the frontend development of the Startup Movers platform by transforming designs into responsive interfaces and contributed to backend features using Laravel.",
-
-            contributions: [
-                "Converted UI/UX designs into responsive and interactive web pages",
-                "Ensured pixel-perfect implementation across desktop and mobile devices",
-                "Integrated frontend with backend APIs",
-                "Built backend functionalities and database operations using Laravel",
-                "Maintained clean, scalable, and reusable code structure"
-            ],
-            link: "https://www.startup-movers.com/"
-        },
-        {
-            id: 3,
+            id: 5,
             title: "Fuel Your Body",
             category: "Shopify Stores",
             img: FuelYourBody,
@@ -103,7 +134,7 @@ const Portfolio = () => {
             link: "https://eatfyb.ca/"
         },
         {
-            id: 4,
+            id: 6,
             title: "Akaari",
             category: "Shopify Stores",
             img: Akaari,
@@ -119,23 +150,7 @@ const Portfolio = () => {
             link: "https://shopakaari.in/"
         },
         {
-            id: 5,
-            title: "Rajdhani Besan",
-            category: "Shopify Stores",
-            img: Rajdhani,
-            role: "Web Developer",
-            description: "Developed a high-performance Shopify store with a clean, user-friendly design and smooth shopping experience tailored for the brand.",
-            contributions: [
-                "Designed and customized Shopify theme with focus on modern UI/UX",
-                "Managed product listings, collections, and store content",
-                "Integrated apps and APIs for enhanced functionality",
-                "Optimized store speed, performance, and mobile responsiveness",
-                "Configured payments, shipping, and essential store settings"
-            ],
-            link: "https://rajdhanifoods.com/"
-        },
-        {
-            id: 6,
+            id: 7,
             title: "DigiBuggy",
             category: "Laravel Apps",
             img: DigiBuggy,
@@ -149,33 +164,6 @@ const Portfolio = () => {
                 "Optimized performance and ensured cross-device compatibility"
             ],
             link: "https://digibuggy.com"
-        },
-        {
-            id: 7,
-            title: "Kiranjyoti",
-            category: "Laravel Apps",
-            img: '/kiranjyoti.svg',
-            role: "Laravel Web Developer",
-            description: "Developed the Kiranjyoti Foundation website using Laravel, bringing the foundation's online presence into a dedicated web application.",
-            technologies: ["Laravel", "PHP"],
-            contributions: ["Built the foundation website using Laravel"],
-            link: "https://kiranjyotifoundation.org/",
-        },
-        {
-            id: 8,
-            title: "Freshiq",
-            category: "Full Stack Apps",
-            img: '/freshiq.svg',
-            role: "Full Stack TypeScript Developer",
-            description: "Built Freshiq with React, Node.js, and SQL using TypeScript across the application. Developed an advanced admin panel and implemented JWT authentication.",
-            technologies: ["React", "Node.js", "SQL", "TypeScript", "JWT"],
-            contributions: [
-                "Developed the React frontend and Node.js backend using TypeScript",
-                "Integrated SQL for application data storage",
-                "Built an advanced admin panel",
-                "Implemented JWT authentication"
-            ],
-            link: "https://tiny-maamoul-ab5c83.netlify.app/",
         },
     ];
 
