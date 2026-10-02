@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import samasthaImg from '../assets/samastha.png';
-import Ashacity from '../assets/asha-city.png';
 import FuelYourBody from '../assets/Fuel-Your-Body.png';
 import Akaari from '../assets/Akaari.png';
-import Clicknest from '../assets/ClicknestSolution.png';
 import DigiBuggy from '../assets/DigiBuggy.png';
 import Rajdhani from '../assets/Rajdhani.png';
 import startupMover from '../assets/startup-mover.png';
@@ -12,22 +10,41 @@ const Portfolio = () => {
     const [activeFilter, setActiveFilter] = useState('All');
     const [selectedProject, setSelectedProject] = useState(null);
 
-    // FIXED: Properly lock body scroll when modal is open
-    useEffect(() => {
-        if (selectedProject) {
-            // Add classes to completely lock the body
-            document.body.style.overflow = 'hidden';
-            document.documentElement.style.overflow = 'hidden'; // For some mobile browsers
-        } else {
-            // Remove classes when modal closes
-            document.body.style.overflow = 'auto';
-            document.documentElement.style.overflow = 'auto';
-        }
+    const modalRef = useRef(null);
 
-        // Cleanup function in case component unmounts while modal is open
+    // Keep nested wheel/touch scrolling native while the page is locked.
+    useEffect(() => {
+        if (!selectedProject) return;
+
+        const previousFocus = document.activeElement;
+        const bodyOverflow = document.body.style.overflow;
+        const htmlOverflow = document.documentElement.style.overflow;
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+        modalRef.current?.focus({ preventScroll: true });
+
+        const handleKeyDown = (event) => {
+            if (event.key === 'Escape') setSelectedProject(null);
+            if (event.key !== 'Tab') return;
+            const controls = modalRef.current?.querySelectorAll('button, a[href]');
+            if (!controls?.length) return;
+            const first = controls[0];
+            const last = controls[controls.length - 1];
+            if (event.shiftKey && (document.activeElement === first || document.activeElement === modalRef.current)) {
+                event.preventDefault();
+                last.focus();
+            } else if (!event.shiftKey && (document.activeElement === last || document.activeElement === modalRef.current)) {
+                event.preventDefault();
+                first.focus();
+            }
+        };
+        document.addEventListener('keydown', handleKeyDown);
+
         return () => {
-            document.body.style.overflow = 'auto';
-            document.documentElement.style.overflow = 'auto';
+            document.body.style.overflow = bodyOverflow;
+            document.documentElement.style.overflow = htmlOverflow;
+            document.removeEventListener('keydown', handleKeyDown);
+            previousFocus?.focus({ preventScroll: true });
         };
     }, [selectedProject]);
 
@@ -35,7 +52,8 @@ const Portfolio = () => {
         "All",
         "Laravel Apps",
         "Shopify Stores",
-        "Custom Web"
+        "Custom Web",
+        "Full Stack Apps"
     ];
 
     const projects = [
@@ -132,6 +150,33 @@ const Portfolio = () => {
             ],
             link: "https://digibuggy.com"
         },
+        {
+            id: 7,
+            title: "Kiranjyoti",
+            category: "Laravel Apps",
+            img: '/kiranjyoti.svg',
+            role: "Laravel Web Developer",
+            description: "Developed the Kiranjyoti Foundation website using Laravel, bringing the foundation's online presence into a dedicated web application.",
+            technologies: ["Laravel", "PHP"],
+            contributions: ["Built the foundation website using Laravel"],
+            link: "https://kiranjyotifoundation.org/",
+        },
+        {
+            id: 8,
+            title: "Freshiq",
+            category: "Full Stack Apps",
+            img: '/freshiq.svg',
+            role: "Full Stack TypeScript Developer",
+            description: "Built Freshiq with React, Node.js, and SQL using TypeScript across the application. Developed an advanced admin panel and implemented JWT authentication.",
+            technologies: ["React", "Node.js", "SQL", "TypeScript", "JWT"],
+            contributions: [
+                "Developed the React frontend and Node.js backend using TypeScript",
+                "Integrated SQL for application data storage",
+                "Built an advanced admin panel",
+                "Implemented JWT authentication"
+            ],
+            link: "https://tiny-maamoul-ab5c83.netlify.app/",
+        },
     ];
 
     const filteredProjects = activeFilter === 'All'
@@ -202,6 +247,15 @@ const Portfolio = () => {
                         <div
                             key={project.id}
                             onClick={() => setSelectedProject(project)}
+                            role="button"
+                            tabIndex={0}
+                            aria-haspopup="dialog"
+                            onKeyDown={(event) => {
+                                if (event.key === 'Enter' || event.key === ' ') {
+                                    event.preventDefault();
+                                    setSelectedProject(project);
+                                }
+                            }}
                             className="min-w-[85vw] md:min-w-0 snap-center group relative rounded-3xl overflow-hidden bg-gradient-to-b from-[#141414] to-[#0a0a0a] border border-white/5 hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/10 cursor-pointer flex flex-col h-full"
                         >
                             {/* Image Container */}
@@ -241,7 +295,7 @@ const Portfolio = () => {
 
             {/* Premium Project Details Modal - Column Layout */}
             {selectedProject && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center px-4 sm:px-6 py-6 md:py-12">
+                <div data-lenis-prevent className="fixed inset-0 z-[100] flex items-center justify-center px-4 sm:px-6 py-6 md:py-12">
                     {/* Backdrop */}
                     <div
                         className="absolute inset-0 bg-black/70 backdrop-blur-md transition-opacity"
@@ -249,11 +303,12 @@ const Portfolio = () => {
                     ></div>
 
                     {/* Modal Content (Flex Column, Custom Scrollbar) */}
-                    <div className="bg-[#111111] border border-white/10 rounded-3xl w-full max-w-3xl relative max-h-full overflow-y-auto custom-scrollbar shadow-2xl shadow-orange-500/10 transform transition-all animate-in fade-in zoom-in-95 duration-300 z-10 flex flex-col">
+                    <div ref={modalRef} role="dialog" aria-modal="true" aria-labelledby="project-modal-title" tabIndex={-1} data-lenis-prevent className="overscroll-contain outline-none bg-[#111111] border border-white/10 rounded-3xl w-full max-w-3xl relative max-h-[calc(100dvh-3rem)] md:max-h-[calc(100dvh-6rem)] overflow-y-auto custom-scrollbar shadow-2xl shadow-orange-500/10 transform transition-all animate-in fade-in zoom-in-95 duration-300 z-10 flex flex-col">
 
                         {/* Close Button */}
                         <button
                             onClick={() => setSelectedProject(null)}
+                            aria-label="Close project details"
                             className="absolute top-4 right-4 z-20 bg-black/60 text-gray-300 hover:text-white hover:bg-orange-500 p-2.5 rounded-full transition-all duration-300 backdrop-blur-md border border-white/10"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -282,11 +337,19 @@ const Portfolio = () => {
                                         {selectedProject.category}
                                     </span>
                                 </div>
-                                <h3 className="text-3xl md:text-5xl font-extrabold text-white mb-2">{selectedProject.title}</h3>
+                                <h3 id="project-modal-title" className="text-3xl md:text-5xl font-extrabold text-white mb-2">{selectedProject.title}</h3>
                                 <p className="text-gray-400 font-medium text-lg border-b border-white/10 pb-5">
                                     Role: <span className="text-white ml-1">{selectedProject.role}</span>
                                 </p>
                             </div>
+
+                            {selectedProject.technologies && (
+                                <div className="flex flex-wrap gap-2" aria-label="Technologies used">
+                                    {selectedProject.technologies.map((technology) => (
+                                        <span key={technology} className="px-3 py-1.5 rounded-lg bg-orange-500/10 text-orange-400 text-sm border border-orange-500/20">{technology}</span>
+                                    ))}
+                                </div>
+                            )}
 
                             {/* Description */}
                             <div>
@@ -297,7 +360,7 @@ const Portfolio = () => {
                             </div>
 
                             {/* Contributions */}
-                            <div>
+                            {selectedProject.contributions.length > 0 && <div>
                                 <h4 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-3 block">Key Contributions</h4>
                                 <ul className="space-y-3">
                                     {selectedProject.contributions.map((item, index) => (
@@ -311,10 +374,10 @@ const Portfolio = () => {
                                         </li>
                                     ))}
                                 </ul>
-                            </div>
+                            </div>}
 
                             {/* Action Button */}
-                            <div className="mt-4 pt-6 border-t border-white/5">
+                            {selectedProject.link && <div className="mt-4 pt-6 border-t border-white/5">
                                 <a
                                     href={selectedProject.link}
                                     target="_blank"
@@ -326,7 +389,7 @@ const Portfolio = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
                                 </a>
-                            </div>
+                            </div>}
                         </div>
                     </div>
                 </div>

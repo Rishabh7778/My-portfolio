@@ -7,22 +7,22 @@ const Experience = () => {
             role: "Independent Full Stack Developer",
             company: "Freelance Clients",
             period: "2026 - Present",
-            desc: "Helping businesses modernize their digital presence. I specialize in tearing down slow, legacy websites and rebuilding them into lightning-fast, high-converting web applications using modern React and Node.js architectures.",
-            highlight: "Specialized in Website Modernization & Performance"
+            desc: "Currently working as a freelance developer, building responsive websites and web applications. Working across frontend development, backend integration, and e-commerce projects.",
+            highlight: "Freelance Web Development"
         },
         {
             id: 2,
-            role: "Full Stack Developer",
+            role: "Web Application Developer Intern",
             company: "The Night Marketers",
-            period: "2021 - 2026",
-            desc: "Architected and deployed robust web applications. Handled everything from crafting responsive, pixel-perfect frontends to designing secure database schemas and developing RESTful APIs.",
-            highlight: "End-to-End Application Development"
+            period: "2025 - 2026",
+            desc: "Completed a six-month internship in web application development. Contributed to responsive interfaces, backend functionality, and API integration while collaborating with the development team.",
+            highlight: "6-Month Web Application Internship"
         },
         {
             id: 3,
             role: "Web Developer Intern",
             company: "TechnoHack",
-            period: "2020 - 2021",
+            period: "2023",
             desc: "Gained hands-on experience in modern frontend workflows. Built interactive UI components and learned the core fundamentals of scalable web design.",
             highlight: "Frontend UI/UX Implementation"
         }
@@ -74,7 +74,7 @@ const Experience = () => {
                     <div className="lg:col-span-7">
                         <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-orange-500 before:via-gray-700 before:to-transparent">
                             
-                            {experiences.map((exp, index) => (
+                            {experiences.map((exp) => (
                                 <div key={exp.id} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                                     
                                     {/* Timeline Dot */}
@@ -131,8 +131,8 @@ const Experience = () => {
                         <div className="mt-4 bg-gradient-to-br from-orange-600 to-yellow-600 p-8 rounded-2xl text-center shadow-lg relative overflow-hidden group">
                             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300"></div>
                             <div className="relative z-10 text-white">
-                                <h3 className="text-2xl font-bold mb-2">Need a modern website?</h3>
-                                <p className="text-white/80 mb-6 text-sm">Let's build a high-performance web application that drives results.</p>
+                                <h3 className="text-2xl font-bold mb-2">Looking for a developer?</h3>
+                                <p className="text-white/80 mb-6 text-sm">Open to full-time web development roles. Let's discuss how I can contribute to your team.</p>
                                 <a href="#contact" className="inline-block bg-white text-orange-600 font-bold px-6 py-3 rounded-full hover:shadow-lg hover:scale-105 transition-all">
                                     Let's Talk
                                 </a>

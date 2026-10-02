@@ -57,7 +57,7 @@ const Hero = () => {
 
                 <div className="flex space-x-4 mb-10">
                     <a href="#contact" className="hero-btn bg-orange-500 hover:bg-orange-600 text-white font-medium px-8 py-3 rounded shadow-lg transition">
-                        Contact us
+                        Contact Me
                     </a>
                     <a href="https://drive.google.com/file/d/1lcpU5ooGcvJH1EsFt2MdvxiPspKInx2f/view?usp=sharing" target='_blank' className="hero-btn bg-transparent border border-gray-600 hover:border-white text-white font-medium px-8 py-3 rounded transition">
                         Download CV
@@ -65,18 +65,18 @@ const Hero = () => {
                 </div>
 
                 {/* Stats Box */}
-                <div className="hero-stats bg-[#1f1f1f] rounded-xl p-6 md:p-8 flex justify-between w-full md:w-11/12 lg:w-3/4 mt-4 shadow-xl border border-white/5">
-                    <div className="pr-6 border-r border-gray-700">
-                        <h3 className="text-orange-500 text-2xl md:text-3xl font-bold">6+</h3>
-                        <p className="text-gray-400 text-sm md:text-base">Experiences</p>
+                <div className="hero-stats bg-[#1f1f1f] rounded-xl p-5 md:p-6 grid grid-cols-3 gap-3 w-full max-w-lg mt-4 shadow-xl border border-white/5">
+                    <div className="pr-3 border-r border-gray-700">
+                        <h3 className="text-orange-500 text-2xl md:text-3xl font-bold">1 Year</h3>
+                        <p className="text-gray-400 text-sm md:text-base">Experience</p>
                     </div>
-                    <div className="px-6 border-r border-gray-700">
-                        <h3 className="text-orange-500 text-2xl md:text-3xl font-bold">62+</h3>
-                        <p className="text-gray-400 text-sm md:text-base">Project done</p>
+                    <div className="px-2 border-r border-gray-700">
+                        <h3 className="text-orange-500 text-2xl md:text-3xl font-bold">15+</h3>
+                        <p className="text-gray-400 text-sm md:text-base">Projects</p>
                     </div>
-                    <div className="pl-6">
-                        <h3 className="text-orange-500 text-2xl md:text-3xl font-bold">60+</h3>
-                        <p className="text-gray-400 text-sm md:text-base">Happy Clients</p>
+                    <div className="pl-2">
+                        <h3 className="text-orange-500 text-2xl md:text-3xl font-bold">Open</h3>
+                        <p className="text-gray-400 text-sm md:text-base">To Work</p>
                     </div>
                 </div>
             </div>

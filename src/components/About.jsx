@@ -118,19 +118,19 @@ const About = () => {
 
                             {/* Paragraph 2: Experience & Tech Stack */}
                             <p className="text-gray-400 leading-relaxed text-sm md:text-base">
-                                With proven experience delivering production-ready interfaces, I’ve mastered the art of building blazing-fast, responsive SPAs using <strong className="text-white">React.js</strong>. Beyond the frontend, I engineer robust and secure architectures using <strong className="text-white">Laravel</strong> and <strong className="text-white">Node.js</strong>, seamlessly integrated with SQL and MongoDB.
+                                With one year of experience across internships and freelance projects, I build responsive interfaces using <strong className="text-white">React.js</strong>. Beyond the frontend, I work with <strong className="text-white">Laravel</strong> and <strong className="text-white">Node.js</strong>, seamlessly integrated with SQL and MongoDB.
                             </p>
 
                             {/* Paragraph 3: E-commerce & Versatility */}
                             <p className="text-gray-400 leading-relaxed text-sm md:text-base">
-                                Whether you need a custom SaaS platform or a high-converting E-commerce store, I bring the right tech stack to turn your vision into reality.
+                                I am currently freelancing and looking for a full-time web development opportunity where I can contribute to real projects, collaborate with a team, and continue growing as a developer.
                             </p>
 
                             {/* Punchy Bullet Points */}
                             <ul className="space-y-3 mt-4 text-sm md:text-base text-gray-400">
                                 <li className="flex items-start justify-center md:justify-start gap-3">
                                     <span className="text-orange-500 mt-1">▹</span>
-                                    <span><strong className="text-white font-medium">Frontend Excellence:</strong> Crafting modern, interactive UIs with the Custom.</span>
+                                    <span><strong className="text-white font-medium">Frontend Excellence:</strong> Building responsive, interactive interfaces with React.js.</span>
                                 </li>
                                 <li className="flex items-start justify-center md:justify-start gap-3">
                                     <span className="text-orange-500 mt-1">▹</span>
